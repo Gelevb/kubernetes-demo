@@ -15,7 +15,7 @@ spec:
       containers:
       - name: ubuntu
         image: ubuntu
-        command: ['/bin/bash']
+        command: ["bash"]
         ports:
         - containerPort: 3000
         
