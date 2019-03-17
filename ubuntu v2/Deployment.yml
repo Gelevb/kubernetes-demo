@@ -8,6 +8,6 @@ spec:
   containers:
   - name: ubuntu-container
     image: ubuntu:18.04
-    command: ["bash"]
+    command: ["/bin/bash"]
     #args: ["HOSTNAME", "KUBERNETES_PORT"]
   restartPolicy: OnFailure
