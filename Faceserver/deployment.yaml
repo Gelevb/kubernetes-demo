@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: faceserver
+spec:
+  selector:
+    matchLabels:
+      app: faceserver
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: faceserver
+    spec:
+      containers:
+      - name: faceserver
+        image: gelevb/faceserver:latest
+        ports:
+        - containerPort: 3000
+        
