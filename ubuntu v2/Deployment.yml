@@ -8,6 +8,7 @@ spec:
   containers:
   - name: ubuntu-container
     image: ubuntu:18.04
-    command: ["/bin/bash"]
-    #args: ["HOSTNAME", "KUBERNETES_PORT"]
+    volumeMounts:
+    - name: shared-data
+      mountPath: /bin/
   restartPolicy: OnFailure
